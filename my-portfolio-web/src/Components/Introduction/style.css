@@ -1,0 +1,27 @@
+.introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+.mainTitle {
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+    z-index: 2;
+}
+
+.mainPoseidon {
+    max-width: 100%;
+    transform: scale(1.5);
+    z-index: 1;
+    margin-top: 80px;
+}
+
+.text {
+    max-width: 100%;
+    transform: scale(1.15);
+    margin-left: 30px;
+}
