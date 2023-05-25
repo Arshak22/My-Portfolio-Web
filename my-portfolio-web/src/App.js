@@ -3,7 +3,7 @@ import Introduction from "./Components/Introduction";
 
 function App() {
   return (
-    <div className="App">
+    <div className="PortfolioWeb">
       <Introduction/>
     </div>
   );
