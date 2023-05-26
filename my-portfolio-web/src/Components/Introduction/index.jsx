@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
+
+import { BsFillCloudDownloadFill } from "react-icons/bs";
+import { HiEnvelope } from "react-icons/hi2";
+
 import Poseidon from '../../assets/FinalPics/Final1.png';
 import FirstText from '../../assets/FinalPics/ChangingText/1.png';
 import SecondText from '../../assets/FinalPics/ChangingText/2.png';
@@ -32,11 +36,11 @@ export default function Introduction() {
         ))}
         <div>
           <button className="wave-btn">
-            <span className="wave-btn_text">My CV</span>
+            <span className="wave-btn_text">My CV <BsFillCloudDownloadFill className='btnIcon'/></span>
             <span className="wave-btn_waves"></span>
           </button>
           <button className="wave-btn">
-            <span className="wave-btn_text">Contact Me</span>
+            <span className="wave-btn_text">Contact Me <HiEnvelope className='btnIcon'/></span>
             <span className="wave-btn_waves"></span>
           </button>
         </div>
