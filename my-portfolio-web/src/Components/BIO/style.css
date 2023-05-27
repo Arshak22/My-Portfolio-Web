@@ -13,6 +13,7 @@
 .colL img {
     max-width: 100%;
     width: 100%;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2)) brightness(85%);
 }
 
 .colR {

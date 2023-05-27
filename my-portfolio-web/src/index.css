@@ -32,7 +32,7 @@ body {
 .PortfolioWeb {
   position: relative;
   width: 100%;
-  height: 500vh;
+  height: auto;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(15px);
 }
