@@ -46,6 +46,11 @@ body::-webkit-scrollbar {
   width: 0;
 }
 
+::selection {
+	background: rgb(0, 32, 176);
+	color: var(--white);
+}
+
 .wave-btn {
 	display: flex;
 	align-items: center;
