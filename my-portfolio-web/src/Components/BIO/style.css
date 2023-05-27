@@ -45,7 +45,7 @@
 .social-icon {
     width: 60px;
     height: 60px;
-    background-color: transparent;
+    background-color: var(--bg);
     text-align: center;
     font-size: 30px;
     margin-right: 20px;
@@ -66,7 +66,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgb(0, 162, 198) 0%, rgb(0, 83, 172) 50%, rgb(0, 21, 113) 100%);
+    background: linear-gradient(180deg, rgb(0, 162, 198) 0%, rgb(0, 83, 172) 40%, rgb(0, 21, 113) 100%);
     transition: .5s;
     z-index: 2;
 }

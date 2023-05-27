@@ -10,9 +10,9 @@
   --light-blue: #003fb3;
   --bg: #0f0e19;
   --white: #ffffff;
-  --button-border-radius: 10px;
-	--transition-all: all 0.5s ease 0s;
-	--defaut-wave-transform: translate3d(-50%, -96%, 0);
+  --button-border-radius: 7px;
+  --transition-all: all 0.5s ease 0s;
+  --defaut-wave-transform: translate3d(-50%, -96%, 0);
 }
 
 body {

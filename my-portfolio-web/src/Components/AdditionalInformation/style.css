@@ -1,0 +1,201 @@
+.MoreInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 8em;
+}
+
+.firstCol, .thirdCol {
+    width: 33%;
+}
+
+.firstCol {
+    text-align: right;
+    padding-left: 10px;
+}
+
+.thirdCol {
+    text-align: left;
+    padding-right: 10px;
+}
+
+.secondCol {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+}
+
+.secondCol img {
+    max-width: 100%;
+    width: 95%;
+}
+
+.firstCol h1, .thirdCol h1 {
+    font-size: 50px;
+}
+
+.firstCol p, .thirdCol p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+.top-margin {
+    margin-top: 20px;
+}
+
+.progressSectionL {
+    padding-left: 10px;
+}
+
+.progressSectionR {
+    padding-right: 10px;
+}
+
+.wrapper {
+    width: 100%;
+    border: 3px solid var(--white);
+    border-radius: 4px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+  
+.container {
+    background-color: var(--bg);
+}
+  
+.barCompleted {
+    background: linear-gradient(90deg, rgb(0, 162, 198) 0%, rgb(0, 83, 172) 40%, rgb(0, 21, 113) 100%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.barCompletedR {
+    background: linear-gradient(90deg, rgb(0, 21, 113) 0%, rgb(0, 83, 172) 60%, rgb(0, 162, 198) 100%);
+}
+
+.bar-1, .bar-2 {
+    width: 100%;
+}
+
+.bar-3 {
+    width: 90%;
+}
+
+.bar-5 {
+    width: 90%;
+}
+
+.bar-4, .bar-6 {
+    width: 85%;
+}
+
+@keyframes barAnimation-100 {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+}
+  
+@keyframes barAnimation-90 {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 90%;
+    }
+}
+  
+@keyframes barAnimation-85 {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 85%;
+    }
+}
+  
+.bar-1,
+.bar-2,
+.bar-3,
+.bar-4,
+.bar-5,
+.bar-6 {
+  width: 0;
+  height: 0;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bar-1 {
+  animation-name: barAnimation-100;
+}
+
+.bar-2 {
+  animation-name: barAnimation-100;
+}
+
+.bar-3 {
+  animation-name: barAnimation-90;
+}
+
+.bar-4 {
+  animation-name: barAnimation-85;
+}
+
+.bar-5 {
+  animation-name: barAnimation-90;
+}
+
+.bar-6 {
+  animation-name: barAnimation-85;
+}
+  
+.bar-1, .bar-4  {
+  animation-delay: 0.1s;
+}
+  
+.bar-2, .bar-5 {
+  animation-delay: 0.2s;
+}
+  
+.bar-3, .bar-6  {
+  animation-delay: 0.3s;
+}
+  
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+  
+.label {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--white);
+    letter-spacing: 1px;
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-delay: 1.5s;
+}
+  
+.labelL {
+    margin-right: 10px;
+}
+
+.labelR {
+    margin-left: 10px;
+}

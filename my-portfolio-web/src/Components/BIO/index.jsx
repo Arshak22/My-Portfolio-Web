@@ -10,7 +10,6 @@ import { FaGithub } from "react-icons/fa";
 import { FaCodepen } from "react-icons/fa";
 
 export default function BIO() {
-
     return (
     <div className='BIOSection'>
         <div className='colL'>
