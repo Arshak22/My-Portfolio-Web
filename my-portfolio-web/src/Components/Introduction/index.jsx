@@ -4,6 +4,8 @@ import './style.css';
 import { BsFillCloudDownloadFill } from "react-icons/bs";
 import { HiEnvelope } from "react-icons/hi2";
 
+import Resume from '../../Resume/Arshak_Kosakyan_CV.pdf';
+
 import Poseidon from '../../assets/FinalPics/Final1.png';
 import FirstText from '../../assets/FinalPics/ChangingText/1.png';
 import SecondText from '../../assets/FinalPics/ChangingText/2.png';
@@ -22,6 +24,15 @@ export default function Introduction() {
     return () => clearInterval(interval);
   }, []);
 
+  const downloadResume = () => {
+    const fileUrl = Resume;
+    const fileName = 'Arshak_Kosakyan_CV.pdf';
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = fileName;
+    link.click();
+  };
+
   return (
     <div className="introduction">
       <div className="mainTitle">
@@ -35,7 +46,7 @@ export default function Introduction() {
           />
         ))}
         <div>
-          <button className="wave-btn">
+          <button className="wave-btn" onClick={downloadResume}>
             <span className="wave-btn_text">My CV <BsFillCloudDownloadFill className='btnIcon'/></span>
             <span className="wave-btn_waves"></span>
           </button>
