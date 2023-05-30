@@ -3,6 +3,8 @@ import Introduction from "./Components/Introduction";
 import BIO from "./Components/BIO";
 import AdditionalInformation from "./Components/AdditionalInformation";
 import Portfolio from "./Components/Portfolio";
+import WhyChoseMe from "./Components/WhyChoseMe";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <BIO/>
       <AdditionalInformation/>
       <Portfolio/>
+      <WhyChoseMe/>
+      <Footer/>
     </div>
   );
 }

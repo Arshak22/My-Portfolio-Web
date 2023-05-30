@@ -1,0 +1,63 @@
+.whyChoseMe {
+    margin-top: 5em;
+    width: 100%;
+    padding-bottom: 3em;
+    overflow: hidden;
+}
+
+.whyChoseContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+}
+
+.whyChoseMe h1 {
+    font-size: 28px;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 55px !important;
+    letter-spacing: 1px;
+    font-family: 'Vollkorn SC', serif;
+}
+
+.characteristics {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(180deg, rgb(0, 162, 198) 0%, rgb(0, 83, 172) 40%, rgb(0, 21, 113) 100%);
+    padding: 15px;
+    border: 3px solid var(--white);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.charL {
+    display: grid;
+    justify-content: flex-end;
+}
+
+.characteristics img {
+    max-width: 100%;
+    height: auto;
+}
+
+.col1 {
+    width: 25%;
+}
+
+.col2 {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.choseMePoseidon {
+    position: relative;
+    right: 20px;
+    width: 100%;
+    transform: scale(1.2);
+
+}
