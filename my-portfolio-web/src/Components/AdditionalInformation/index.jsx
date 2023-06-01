@@ -3,6 +3,7 @@ import './style.css';
 import ProgressBar from "@ramonak/react-progress-bar";
 
 import Trident from '../../assets/FinalPics/FinalTrident.png';
+import WaterDrops from '../../assets/FinalPics/WaterDrops.png';
 
 export default function AdditionalInformation() {
     return(
@@ -23,7 +24,7 @@ export default function AdditionalInformation() {
             <div className='progressSectionL'>
                 <ProgressBar completed={100} customLabel="Armenian" dir='rtl' className="wrapper"
                 barContainerClassName="container"
-                completedClassName="barCompleted bar-1"
+                completedClassName='barCompleted bar-1'
                 labelClassName="label labelL"/>
                 <ProgressBar completed={100} customLabel="English" dir='rtl' className="wrapper"
                 barContainerClassName="container"
@@ -36,7 +37,8 @@ export default function AdditionalInformation() {
             </div>
         </div>
         <div className='secondCol'>
-            <img src={Trident} alt='Trident'/>
+            <img src={Trident} alt='Trident' className='Trident'/>
+            <img src={WaterDrops} alt='WaterDrops' className='WaterDrops'/>
         </div>
         <div className='thirdCol'>
             <h1>Experience</h1>

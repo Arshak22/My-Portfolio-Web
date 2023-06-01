@@ -21,6 +21,7 @@
 }
 
 .secondCol {
+    position: relative;
     width: 33%;
     display: flex;
     justify-content: center;
@@ -29,7 +30,41 @@
 .secondCol img {
     max-width: 100%;
     width: 95%;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2)) brightness(90%);
 }
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(15);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+
+}
+
+.WaterDrops {
+    position: absolute;
+    top: 0;
+    animation: moveLeftRight 5s infinite linear;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.Trident {
+  animation: moveUpDown 5s infinite ease-in-out;
+}
+
 
 .firstCol h1, .thirdCol h1 {
     font-size: 50px;
