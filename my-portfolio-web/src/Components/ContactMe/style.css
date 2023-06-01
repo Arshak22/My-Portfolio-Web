@@ -1,0 +1,97 @@
+.contactMe {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 6em 15em;
+}
+
+.contactMe::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../../assets/Gif/Earth.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(150%) contrast(100%) hue-rotate(314deg) saturate(2);
+    z-index: -1;
+}
+
+.contactMe h1 {
+    font-family: 'Vollkorn SC', serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+.contactMe p {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.form {
+    width: 100%;
+    border-radius: 10px;
+    padding: 3em 12em;
+    background-color: #000000e5;
+    box-shadow: 0 0 10px 3px #adadad87;
+}
+
+.inputs {
+    display: grid;
+}
+
+.inputs div {
+    width: 100%;
+}
+
+.inputs div .formInp {
+    width: 47%;
+}
+
+.formInp {
+    background-color: transparent;
+    border: 3px solid var(--white);
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--white);
+    margin: 10px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.formSubmit {
+    height: 60px;
+    width: 200px;
+    margin: 10px auto;
+    transform: scale(0.85);
+}
+
+.formSubmit .wave-btn_waves {
+    left: -50px;
+}
+
+.formInp:focus-visible {
+    outline: none !important;
+}
+
+.formInp::placeholder {
+    color: var(--white);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    -webkit-transition-delay: 9999s;
+     transition-delay: 9999s;
+    background-color: transparent !important;
+    -webkit-text-fill-color: var(--white) !important;
+}

@@ -12,7 +12,7 @@ import SecondText from '../../assets/FinalPics/ChangingText/2.png';
 import ThirdText from '../../assets/FinalPics/ChangingText/3.png';
 import FourthText from '../../assets/FinalPics/ChangingText/4.png';
 
-export default function Introduction() {
+export default function Introduction({ scrollToContact }) {
   const imageSources = [FirstText, SecondText, ThirdText, FourthText];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -45,12 +45,12 @@ export default function Introduction() {
             className={`text ${index === currentImageIndex ? 'active' : ''}`}
           />
         ))}
-        <div>
+        <div className='btns'>
           <button className="wave-btn" onClick={downloadResume}>
             <span className="wave-btn_text">My CV <BsFillCloudDownloadFill className='btnIcon'/></span>
             <span className="wave-btn_waves"></span>
           </button>
-          <button className="wave-btn">
+          <button className="wave-btn" onClick={scrollToContact}>
             <span className="wave-btn_text">Contact Me <HiEnvelope className='btnIcon'/></span>
             <span className="wave-btn_waves"></span>
           </button>
@@ -60,4 +60,4 @@ export default function Introduction() {
         <img src={Poseidon} alt="Poseidon-1" className="mainPoseidon" />
       </div>
     </div>);
-}
+};
