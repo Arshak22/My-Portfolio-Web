@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import LoadingPage from "./Components/LoadingPage";
 import Introduction from "./Components/Introduction";
 import BIO from "./Components/BIO";
 import AdditionalInformation from "./Components/AdditionalInformation";
@@ -8,7 +9,17 @@ import ContactMe from "./Components/ContactMe";
 import Footer from "./Components/Footer";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const contactRef = useRef(null);
+
+  useEffect(() => {
+    // Simulate a 2-second loading delay
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const scrollToContact = () => {
     contactRef.current.scrollIntoView({
@@ -21,17 +32,23 @@ function App() {
 
   return (
     <div className="PortfolioWeb">
-      <Introduction scrollToContact={scrollToContact}/>
-      <BIO/>
-      <AdditionalInformation/>
-      <Portfolio/>
-      <WhyChoseMe/>
-      <div ref={contactRef}>
-        <ContactMe />
-      </div>
-      <Footer/>
+      {isLoading ? (
+        <LoadingPage />
+      ) : (
+        <>
+          <Introduction scrollToContact={scrollToContact} />
+          <BIO />
+          <AdditionalInformation />
+          <Portfolio />
+          <WhyChoseMe />
+          <div ref={contactRef}>
+            <ContactMe />
+          </div>
+          <Footer />
+        </>
+      )}
     </div>
   );
-};
+}
 
 export default App;
