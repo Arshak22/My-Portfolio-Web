@@ -8,6 +8,12 @@ export default function ContactMe() {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    const emailInput = form.current.elements.from_email;
+    const emailValue = emailInput.value.trim();
+    if (!emailValue) {
+      setMessage('Email Address is required');
+      return;
+    }
 
     emailjs
       .sendForm(
@@ -22,7 +28,7 @@ export default function ContactMe() {
         },
         (error) => {
           setMessage(
-            'Oops something went wrong, please check your input fields'
+            'Oops something went wrong, please check your inputs'
           );
         }
       );
