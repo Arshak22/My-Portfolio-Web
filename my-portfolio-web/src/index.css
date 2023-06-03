@@ -8,7 +8,7 @@
 
 :root {
   --light-blue: #003fb3;
-  --bg: #0f0e19;
+  --bg: #080026;
   --white: #ffffff;
   --button-border-radius: 7px;
   --transition-all: all 0.5s ease 0s;
@@ -131,4 +131,8 @@ body::-webkit-scrollbar {
 	100% {
 		transform: var(--defaut-wave-transform) rotate(360deg);
 	}
+}
+
+.hiddenScroll {
+	overflow-y: hidden;
 }

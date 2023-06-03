@@ -66,6 +66,7 @@ export default function ContactMe() {
               name='message'
               placeholder='Message'
               className='formInp'
+              rows={5}
               required
             ></textarea>
           </div>
