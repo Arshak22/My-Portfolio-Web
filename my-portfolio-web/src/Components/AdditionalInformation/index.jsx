@@ -4,10 +4,12 @@ import ProgressBar from "@ramonak/react-progress-bar";
 
 import Trident from '../../assets/FinalPics/FinalTrident.png';
 import WaterDrops from '../../assets/FinalPics/WaterDrops.png';
+import { useGlobalContext } from "../../Context/Context";
 
 export default function AdditionalInformation() {
+    const {popUpOpen} = useGlobalContext();
     return(
-    <div className='MoreInfo'>
+    <div className={popUpOpen ? 'MoreInfo bluredSection' : 'MoreInfo'}>
         <div className='firstCol'>
             <h1>Education</h1>
             <p>Sep 2017-May 2023 -- American University of Armenia(AUA)<br/>BS in Computer Science

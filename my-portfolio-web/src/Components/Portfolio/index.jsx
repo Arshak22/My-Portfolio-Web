@@ -3,6 +3,8 @@ import Popup from 'reactjs-popup';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './style.css';
+import { useGlobalContext } from "../../Context/Context";
+
 import { ImCross } from "react-icons/im";
 
 
@@ -50,7 +52,7 @@ import Project6_3 from '../../assets/PortfolioWebPics/4-3.jpg';
 import Project6_4 from '../../assets/PortfolioWebPics/4-4.jpg';
 
 export default function Portfolio() {
-    const [popUpOpen, setPopUpOpen] = useState(false);
+    const {popUpOpen, setPopUpOpen} = useGlobalContext();
     const [popUpState, setPopUpState] = useState(Array(6).fill(false));
     const firstProject = [Project1_1, Project1_2, Project1_3, Project1_4];
     const secondProject = [Project2_1, Project2_2, Project2_3, Project2_4];

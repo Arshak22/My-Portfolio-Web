@@ -1,5 +1,6 @@
 import React from "react";
 import './style.css';
+import { useGlobalContext } from "../../Context/Context";
 
 import Poseidon from '../../assets/FinalPics/Poseidon-Cool.png';
 
@@ -9,8 +10,9 @@ import Professionalism from '../../assets/Icons/tie.png';
 import Collaboration from '../../assets/Icons/cooperation.png';
 
 export default function WhyChoseMe() {
+    const {popUpOpen} = useGlobalContext();
     return(
-    <div className="whyChoseMe">
+    <div className={popUpOpen ? 'whyChoseMe bluredSection' : 'whyChoseMe'}>
         <h1 className="sectionTitle">Why I Stand Out</h1>
         <div className="whyChoseContainer">
             <div className="firstCol charL col1">
