@@ -167,7 +167,7 @@ export default function Portfolio() {
                         <div className='popUpInfo'>
                             <h1>Real Estate Agent<br/>Website</h1> 
                             <h3>IDX Template</h3>
-                            <p>Introducing my creation, a cutting-edge Real Estate Agent Website that revolutionizes the way buyers and sellers connect. This dynamic platform combines powerful branding tools with an integrated IDX (Internet Data Exchange) feature, enabling agents to showcase their expertise and properties.</p>
+                            <p>Introducing my creation, a cutting-edge Real Estate Agent Website that revolutionizes the way buyers and sellers connect. This dynamic platform combines powerful branding tools with an integrated IDX (Internet Data Exchange) feature.</p>
                             <a href="https://www.demo1.mbswebsite.com/" target="_blank" rel="noopener noreferrer"><button className='popBtn'>View Demo</button></a>
                         </div>
                         <button onClick={close} className='closeBtn'><ImCross/></button>
@@ -233,7 +233,7 @@ export default function Portfolio() {
                         <div className='popUpInfo'>
                             <h1>Real Estate Agent<br/>Website</h1> 
                             <h3>IDX Template</h3>
-                            <p>Elevate your real estate brand with a dynamic website template designed exclusively for agents. Featuring stunning visuals and integrated IDX functionality, this platform effortlessly connects you with potential buyers and sellers, showcasing your expertise and properties in style.</p>
+                            <p>Elevate your real estate brand with a dynamic website template designed exclusively for agents. Featuring stunning visuals and integrated IDX functionality, this platform effortlessly connects you with potential buyers and sellers.</p>
                             <a href="https://demo107.tcy.nsq.mybluehost.me/" target="_blank" rel="noopener noreferrer"><button className='popBtn'>View Demo</button></a>
                         </div>
                         <button onClick={close} className='closeBtn'><ImCross/></button>
@@ -266,7 +266,7 @@ export default function Portfolio() {
                         <div className='popUpInfo'>
                             <h1>Insurance Agent<br/>Website</h1> 
                             <h3>Insurance Template</h3>
-                            <p>Unlock your insurance agency's online potential with a sleek and modern website template tailored specifically for agents. Seamlessly showcase your services, expertise, and personalized branding, while effortlessly connecting with clients through intuitive design and interactive features.</p>
+                            <p>Unlock your insurance agency's online potential with a sleek and modern website template tailored specifically for agents. Seamlessly showcase your services, expertise, and personalized branding, while effortlessly connecting with clients.</p>
                             <a href="https://demo82.tcy.nsq.mybluehost.me/" target="_blank" rel="noopener noreferrer"><button className='popBtn'>View Demo</button></a>
                         </div>
                         <button onClick={close} className='closeBtn'><ImCross/></button>

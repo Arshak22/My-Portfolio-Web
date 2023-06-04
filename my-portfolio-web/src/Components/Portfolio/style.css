@@ -50,8 +50,8 @@
 .project {
     width: 450px;
     height: 100%;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -79,11 +79,12 @@
 
 .waterElement1 {
     top: 100px;
+    left: 20px;
 }
 
 .waterElement2 {
     bottom: 100px;
-    right: 0;
+    right: 30px;
 }
 
 .popUpContainer {
@@ -95,7 +96,7 @@
     background-color: var(--bg);
     border: 3px solid var(--white);
     border-radius: 10px;
-    height: auto;
+    height: 320px;
     width: 77%;
     display: flex;
     justify-content: center;
@@ -132,10 +133,10 @@
 
 .closeBtn {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     color: var(--white);
-    padding: 10px 13px;
+    padding: 8px 10px;
     border: 3px solid var(--white);
     border-radius: 3px;
     background: linear-gradient(180deg, rgb(0, 162, 198) 0%, rgb(0, 83, 172) 40%, rgb(0, 21, 113) 100%);
@@ -153,7 +154,7 @@
 }
 
 .carousel .slider {
-    height: 350px;
+    height: 320px;
 }
 
 .carousel-status {
@@ -161,11 +162,11 @@
 }
 
 .popUpSlider {
-    width: 55%;
+    width: 60%;
 }
 
 .popUpInfo {
-    width: 45%;
+    width: 40%;
     padding: 30px;
 }
 
@@ -186,19 +187,25 @@
 }
 
 .popUpInfo h1 {
-    font-size: 25px;
+    font-size: 21px;
+}
+
+.popUpInfo h3 {
+    font-size: 18px;
 }
 
 .popUpInfo p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 500;
     letter-spacing: 1px;
+    line-height: 20px;
     margin-top: 10px;
+    font-size: 14px;
 }
 
 .popBtn {
     font-family: 'Vollkorn SC', serif;
-	font-size: 17px;
+	font-size: 13px;
     font-weight: 600;
     border-radius: 5px;
     border: 3px solid var(--white);
@@ -206,7 +213,7 @@
 	color: var(--white);
 	text-transform: uppercase;
 	letter-spacing: 2px;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 10px;
     background: linear-gradient(180deg, rgb(0, 162, 198) 0%, rgb(0, 83, 172) 40%, rgb(0, 21, 113) 100%);
     cursor: pointer;
