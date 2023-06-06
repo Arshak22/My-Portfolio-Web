@@ -31,8 +31,8 @@ export default function BIO() {
             },
         });
 
-        const fadeIn = gsap.fromTo(sectionFadeIn, {y: 100, opacity: 0}, {
-            opacity: 1, y:0,
+        const fadeIn = gsap.fromTo(sectionFadeIn, {y: -100, opacity: 0}, {
+            opacity: 1, y: 0,
             scrollTrigger: {
                 trigger: sectionFadeIn,
                 start: 'top',

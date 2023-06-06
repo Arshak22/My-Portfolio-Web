@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { gsap } from "gsap-trial";
 import './style.css';
 import ProgressBar from "@ramonak/react-progress-bar";
 
@@ -8,9 +9,56 @@ import { useGlobalContext } from "../../Context/Context";
 
 export default function AdditionalInformation() {
     const {popUpOpen} = useGlobalContext();
+    const refColL = useRef(null);
+    const refColM = useRef(null);
+    const refColR = useRef(null);
+    const ref = useRef(null);
+  
+    useEffect(() => {
+      const colL = refColL.current;
+      const colM = refColM.current;
+      const colR = refColR.current;
+
+      const fadeInL = gsap.fromTo(colL, {x: -300, opacity: 0}, {
+        opacity: 1, x: 0,
+        scrollTrigger: {
+          trigger: colL,
+          start: 'top',
+          end: '90%',
+          scrub: true
+        }
+      });
+
+      const fadeInM = gsap.fromTo(colM, {y: 10, opacity: 0}, {
+        opacity: 1, y: 0,
+        scrollTrigger: {
+          trigger: colM,
+          start: 'top',
+          end: '+=50%',
+          scrub: true
+        }
+      });
+
+      const fadeInR = gsap.fromTo(colR, {x: 300, opacity: 0}, {
+        opacity: 1, x: 0,
+        scrollTrigger: {
+          trigger: colR,
+          start: 'top',
+          end: '90%',
+          scrub: true
+        }
+      });
+  
+      return () => {
+        fadeInL.kill();
+        fadeInM.kill();
+        fadeInR.kill();
+      };
+    }, [ref]);
+
     return(
     <div className={popUpOpen ? 'MoreInfo bluredSection' : 'MoreInfo'}>
-        <div className='firstCol'>
+        <div ref={refColL} className='firstCol'>
             <h1>Education</h1>
             <p>Sep 2017-May 2023 -- American University of Armenia(AUA)<br/>BS in Computer Science
             </p>
@@ -38,11 +86,11 @@ export default function AdditionalInformation() {
                 labelClassName="label labelL"/>
             </div>
         </div>
-        <div className='secondCol'>
+        <div ref={refColM} className='secondCol'>
             <img src={Trident} alt='Trident' className='Trident'/>
             <img src={WaterDrops} alt='WaterDrops' className='WaterDrops'/>
         </div>
-        <div className='thirdCol'>
+        <div ref={refColR} className='thirdCol'>
             <h1>Experience</h1>
             <p>Jun 2021-Jun 2022 -- MyBrokerSearch<br/>Web Developer
             </p>
