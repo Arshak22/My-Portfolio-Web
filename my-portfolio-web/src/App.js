@@ -1,4 +1,8 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useLayoutEffect } from "react";
+import { gsap } from "gsap-trial";
+import ScrollTrigger from "gsap-trial/ScrollTrigger";
+import ScrollSmoother from "gsap-trial/ScrollSmoother";
+
 import LoadingPage from "./Components/LoadingPage";
 import Introduction from "./Components/Introduction";
 import BIO from "./Components/BIO";
@@ -9,16 +13,28 @@ import ContactMe from "./Components/ContactMe";
 import Footer from "./Components/Footer";
 
 function App() {
+  const wrapperRef = useRef();
   const [isLoading, setIsLoading] = useState(true);
   const contactRef = useRef(null);
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
   useEffect(() => {
-    // Simulate a 2-second loading delay
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
-
     return () => clearTimeout(timer);
+  }, []);
+
+  useLayoutEffect(() => {
+    if(ScrollTrigger.isTouch !== 1) {
+      let smoother = ScrollSmoother.create({
+        smooth: 2,
+        effects: true
+      });
+      return () => {
+        smoother.kill();
+      };
+    }
   }, []);
 
   const scrollToContact = () => {
@@ -31,22 +47,26 @@ function App() {
   };
 
   return (
-    <div className="PortfolioWeb">
-      {isLoading ? (
-        <LoadingPage />
-      ) : (
-        <>
-          <Introduction scrollToContact={scrollToContact} />
-          <BIO />
-          <AdditionalInformation />
-          <Portfolio />
-          <WhyChoseMe />
-          <div ref={contactRef}>
-            <ContactMe />
+    <div ref={wrapperRef} id="smooth-wrapper" className="PortfolioWeb">
+      <div id="smooth-content">
+        {isLoading ? (
+          <LoadingPage />
+        ) : (
+          <div>
+              <div>
+                <Introduction scrollToContact={scrollToContact} />
+                <BIO />
+                <AdditionalInformation />
+                <Portfolio />
+                <WhyChoseMe />
+                <div ref={contactRef}>
+                  <ContactMe />
+                </div>
+                <Footer />
+              </div>
           </div>
-          <Footer />
-        </>
-      )}
+        )}
+      </div>
     </div>
   );
 }

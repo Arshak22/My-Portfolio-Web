@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 17em;
+    margin-top: 3em;
 }
 
 .colL {
@@ -13,10 +13,12 @@
 .colL img {
     max-width: 100%;
     width: 100%;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2)) brightness(85%);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
 }
 
 .colR {
+    position: relative;
+    top: 15em;
     width: 50%;
     padding-right: 10em;
 }

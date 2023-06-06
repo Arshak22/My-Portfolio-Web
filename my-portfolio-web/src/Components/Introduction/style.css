@@ -8,7 +8,7 @@
 .mainTitle {
     width: 80%;
     position: relative;
-    top: 0px;
+    top: 5em;
     font-size: 35px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -28,6 +28,8 @@
 }
 
 .mainPoseidon {
+    position: relative;
+    top: 0em;
     max-width: 100%;
     transform: scale(1.5);
     z-index: 1;

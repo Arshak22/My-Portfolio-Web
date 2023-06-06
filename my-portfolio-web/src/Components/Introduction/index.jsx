@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { gsap } from "gsap-trial";
 import './style.css';
 
 import { BsFillCloudDownloadFill } from "react-icons/bs";
@@ -15,6 +16,41 @@ import FourthText from '../../assets/FinalPics/ChangingText/4.png';
 export default function Introduction({ scrollToContact }) {
   const imageSources = [FirstText, SecondText, ThirdText, FourthText];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const refSection = useRef(null);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const section = refSection.current;
+    const element = ref.current;
+    const speed = parseFloat(element.getAttribute("data-speed"));
+
+    const animation = gsap.to(element, {
+      y: () => -window.innerHeight * speed,
+      ease: "none",
+      scrollTrigger: {
+        trigger: element,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+
+    const fadeOut = gsap.fromTo(section, {opacity: 1}, {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: section,
+        start: 'center',
+        end: '720',
+        scrub: true
+      }
+    });
+
+    return () => {
+      animation.kill();
+      fadeOut.kill();
+    };
+  }, [ref]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -34,8 +70,8 @@ export default function Introduction({ scrollToContact }) {
   };
 
   return (
-    <div className="introduction">
-      <div className="mainTitle">
+    <div ref={refSection} className="introduction">
+      <div ref={ref} data-speed="0.5" className="mainTitle">
         <h1>Greetings, mortal! I am Arshak</h1>
         {imageSources.map((src, index) => (
           <img
@@ -57,7 +93,7 @@ export default function Introduction({ scrollToContact }) {
         </div>
       </div>
       <div>
-        <img src={Poseidon} alt="Poseidon-1" className="mainPoseidon" />
+        <img src={Poseidon} alt="Poseidon-1" className="mainPoseidon"/>
       </div>
     </div>);
 };

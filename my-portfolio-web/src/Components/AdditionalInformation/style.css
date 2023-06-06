@@ -40,7 +40,6 @@
   50% {
     transform: translateX(15px);
   }
-
 }
 
 .WaterDrops {
@@ -89,7 +88,7 @@
     padding-right: 10px;
 }
 
-.wrapper {
+.wrapperBar {
     width: 100%;
     border: 3px solid var(--white);
     border-radius: 4px;

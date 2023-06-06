@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useRef} from 'react';
+import { gsap } from "gsap-trial";
 import './style.css';
 
 import Poseidon from '../../assets/FinalPics/Final2.png';
@@ -10,12 +11,48 @@ import { FaGithub } from "react-icons/fa";
 import { FaCodepen } from "react-icons/fa";
 
 export default function BIO() {
+    const refSectionFadeIn = useRef(null);
+    const refSectionFadeOut = useRef(null);
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const sectionFadeIn = refSectionFadeIn.current;
+        const element = ref.current;
+        const speed = parseFloat(element.getAttribute("data-speed"));
+
+        const animation = gsap.to(element, {
+            y: () => -window.innerHeight * speed,
+            ease: "none",
+            scrollTrigger: {
+                trigger: element,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true,
+            },
+        });
+
+        const fadeIn = gsap.fromTo(sectionFadeIn, {y: 100, opacity: 0}, {
+            opacity: 1, y:0,
+            scrollTrigger: {
+                trigger: sectionFadeIn,
+                start: 'top',
+                end: '80%',
+                scrub: true
+            }
+        });
+
+        return () => {
+            animation.kill();
+            fadeIn.kill();
+        };
+    }, [ref]);
+
     return (
-    <div className='BIOSection'>
+    <div ref={refSectionFadeIn} className='BIOSection'>
         <div className='colL'>
             <img src={Poseidon} alt='Poseidon2'/>
         </div>
-        <div className='colR'>
+        <div ref={ref} data-speed="0.5" className='colR'>
             <h1>Welcome to my digital realm!</h1>
             <p>I'm Arshak Kosakyan, a Front End Developer who brings your online vision to life with a touch of magic. With a deep passion for Greek Mythology, I've crafted this portfolio website with the enchanting theme of Poseidon himself.<br/><br/>
 

@@ -24,15 +24,15 @@ export default function AdditionalInformation() {
             </p>
             <h1 className='top-margin'>Languages</h1>
             <div className='progressSectionL'>
-                <ProgressBar completed={100} customLabel="Armenian" dir='rtl' className="wrapper"
+                <ProgressBar completed={100} customLabel="Armenian" dir='rtl' className="wrapperBar"
                 barContainerClassName="container"
                 completedClassName='barCompleted bar-1'
                 labelClassName="label labelL"/>
-                <ProgressBar completed={100} customLabel="English" dir='rtl' className="wrapper"
+                <ProgressBar completed={100} customLabel="English" dir='rtl' className="wrapperBar"
                 barContainerClassName="container"
                 completedClassName="barCompleted bar-2"
                 labelClassName="label labelL"/>
-                <ProgressBar completed={90} customLabel="Russian" dir='rtl' className="wrapper"
+                <ProgressBar completed={90} customLabel="Russian" dir='rtl' className="wrapperBar"
                 barContainerClassName="container"
                 completedClassName="barCompleted bar-3"
                 labelClassName="label labelL"/>
@@ -56,15 +56,15 @@ export default function AdditionalInformation() {
             </p>
             <h1 className='top-margin'>Skills</h1>
             <div className='progressSectionR'>
-                <ProgressBar completed={85} customLabel="React JS / JavaScript" dir='ltr' className="wrapper"
+                <ProgressBar completed={85} customLabel="React JS / JavaScript" dir='ltr' className="wrapperBar"
                 barContainerClassName="container"
                 completedClassName="barCompleted barCompletedR bar-4"
                 labelClassName="label labelR"/>
-                <ProgressBar completed={90} customLabel="HTML / CSS / SASS" dir='ltr' className="wrapper"
+                <ProgressBar completed={90} customLabel="HTML / CSS / SASS" dir='ltr' className="wrapperBar"
                 barContainerClassName="container"
                 completedClassName="barCompleted barCompletedR bar-5"
                 labelClassName="label labelR"/>
-                <ProgressBar completed={85} customLabel="WordPress" dir='ltr' className="wrapper"
+                <ProgressBar completed={85} customLabel="WordPress" dir='ltr' className="wrapperBar"
                 barContainerClassName="container"
                 completedClassName="barCompleted barCompletedR bar-6"
                 labelClassName="label labelR"/>
