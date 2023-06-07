@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect, useRef} from 'react';
+import { gsap } from "gsap-trial";
 import Popup from 'reactjs-popup';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -53,6 +54,7 @@ import Project6_4 from '../../assets/PortfolioWebPics/4-4.jpg';
 
 export default function Portfolio() {
     const {popUpOpen, setPopUpOpen} = useGlobalContext();
+    const refSectionFadeIn = useRef(null);
     const [popUpState, setPopUpState] = useState(Array(6).fill(false));
     const firstProject = [Project1_1, Project1_2, Project1_3, Project1_4];
     const secondProject = [Project2_1, Project2_2, Project2_3, Project2_4];
@@ -60,6 +62,24 @@ export default function Portfolio() {
     const fourthProject = [Project4_1, Project4_2, Project4_3, Project4_4];
     const fifthProject = [Project5_1, Project5_2, Project5_3, Project5_4];
     const sixthProject = [Project6_1, Project6_2, Project6_3, Project6_4];
+
+    useEffect(() => {
+        const sectionFadeIn = refSectionFadeIn.current;
+        const fadeIn = gsap.fromTo(sectionFadeIn, {y: 300, opacity: 0}, {
+            opacity: 1, y: 0,
+            scrollTrigger: {
+                trigger: sectionFadeIn,
+                start: 'top',
+                end: '500',
+                scrub: true
+            }
+        });
+
+        return () => {
+            fadeIn.kill();
+        };
+    }, []);
+
     const handleOpen = (index) => {
         setPopUpState(popUpState.map((popup, i) => i === index ? true : false));
         document.body.classList.add('hiddenScroll');
@@ -76,7 +96,7 @@ export default function Portfolio() {
     <div className={popUpOpen ? 'Portfolio bluredSection' : 'Portfolio'}>
         <h1>My Portfolio</h1>
         <img src={WaterElement1} alt='WaterElement-1' className='waterElement1'/>
-        <div className='portfolioContainer'>
+        <div ref={refSectionFadeIn} className='portfolioContainer'>
             <Popup trigger={
                 <div className='project'>
                     <img src={Project1_1} alt='Project-1'/>

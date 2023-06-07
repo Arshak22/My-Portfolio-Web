@@ -12,7 +12,6 @@ import { FaCodepen } from "react-icons/fa";
 
 export default function BIO() {
     const refSectionFadeIn = useRef(null);
-    const refSectionFadeOut = useRef(null);
     const ref = useRef(null);
 
     useEffect(() => {

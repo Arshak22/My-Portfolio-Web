@@ -28,7 +28,7 @@ function App() {
   useLayoutEffect(() => {
     if(ScrollTrigger.isTouch !== 1) {
       let smoother = ScrollSmoother.create({
-        smooth: 2,
+        smooth: 3,
         effects: true
       });
       return () => {
