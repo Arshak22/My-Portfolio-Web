@@ -84,3 +84,30 @@
     width: 100%;
     transform: scale(1.3);
 }
+
+@media screen and (max-width: 500px) {
+    .whyChoseContainer {
+        display: block;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .sectionTitle {
+        font-size: 40px !important;
+    }
+    .col1, .col2 {
+        width: 100%;
+    }
+    .choseMePoseidon {
+        display: none;
+    }
+    .characteristics {
+        width: 130px;
+    }
+    .whyChoseMe h1 {
+        font-size: 25px;
+    }
+    .firstCol p, .thirdCol p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+}

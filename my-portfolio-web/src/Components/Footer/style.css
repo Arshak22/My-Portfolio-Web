@@ -36,3 +36,23 @@
 .footer div {
     width: 33%;
 }
+
+@media screen and (max-width: 500px) {
+    .footer {
+        display: block;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 3em;
+    }
+    .footer div {
+        width: 100%;
+    }
+    .footerLogo {
+        width: 200px;
+        left: 20%;
+    }
+    .footerIcons {
+        margin-top: 20px;
+        justify-content: center;
+    }
+}

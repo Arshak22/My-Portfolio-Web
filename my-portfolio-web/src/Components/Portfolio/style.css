@@ -32,13 +32,24 @@
     font-family: 'Vollkorn SC', serif;
 }
 
-.portfolioContainer {
+.projects {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     padding-top: 2em;
+}
+
+.portfolioContainer {
+    opacity: 0;
+    transition: all 1s ease;
+    transform: translateY(100px);
+}
+
+.fadeIn {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .project {
@@ -278,5 +289,47 @@
     100% {
       opacity: 1;
       transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Portfolio {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .Portfolio h1 {
+        font-size: 40px;
+    }
+    .waterElement1 {
+        width: 100px;
+        left: -10px;
+    }
+    .waterElement2 {
+        width: 100px;
+        right: -5px;
+    }
+    .myPopUp {
+        display: block;
+        height: auto;
+        width: 90%;
+    }
+    .PoseidonPopUpL, .PoseidonPopUpM, .PoseidonPopUpR {
+        display: none;
+    }
+    .popUpSlider, .popUpInfo {
+        width: 100%;
+    }
+    .popUpInfo {
+        padding: 15px;
+        padding-bottom: 20px;
+    }
+    .popUpInfo h1 {
+        font-size: 20px;
+    }
+    .popUpInfo h3 {
+        font-size: 17px;
+    }
+    .popup-content {
+        left: 11% !important;
     }
 }

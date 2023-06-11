@@ -8,23 +8,35 @@
 
 .firstCol, .thirdCol {
     width: 33%;
+    opacity: 0;
+    transition: all 2s ease;
 }
 
 .firstCol {
     text-align: right;
     padding-left: 10px;
+    transform: translateX(-500px);
 }
 
 .thirdCol {
     text-align: left;
     padding-right: 10px;
+    transform: translateX(500px);
 }
 
 .secondCol {
     position: relative;
-    width: 33%;
     display: flex;
     justify-content: center;
+    opacity: 0;
+    transition: all 2s ease;
+    width: 33%;
+    transform: translateY(500px);
+}
+
+.fadeInL, .fadeInM, .fadeInR {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
 }
 
 .secondCol img {
@@ -233,4 +245,18 @@
 
 .labelR {
     margin-left: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    .MoreInfo {
+        display: block;
+    }
+    .firstCol, .secondCol, .thirdCol {
+        width: 100%;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .firstCol h1, .thirdCol h1 {
+        font-size: 40px;
+    }
 }

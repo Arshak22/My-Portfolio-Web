@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './style.css';
 import ProgressBar from "@ramonak/react-progress-bar";
 
@@ -8,14 +8,31 @@ import { useGlobalContext } from "../../Context/Context";
 
 export default function AdditionalInformation() {
     const {popUpOpen} = useGlobalContext();
+    const [active, setIsActive] = useState(false);
     const refColL = useRef(null);
     const refColM = useRef(null);
     const refColR = useRef(null);
-    const ref = useRef(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const section = document.querySelector(".MoreInfo");
+            const sectionTop = section.offsetTop;
+            const scrollPosition = window.pageYOffset;
+            if (scrollPosition >= sectionTop - 200) {
+              setIsActive(true);
+            } else {
+              setIsActive(false);
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
   
     return(
     <div className={popUpOpen ? 'MoreInfo bluredSection' : 'MoreInfo'}>
-        <div ref={refColL} className='firstCol'>
+        <div ref={refColL} className={`firstCol ${active ? 'fadeInL' : ''}`}>
             <h1>Education</h1>
             <p>Sep 2017-May 2023 -- American University of Armenia(AUA)<br/>BS in Computer Science
             </p>
@@ -43,11 +60,11 @@ export default function AdditionalInformation() {
                 labelClassName="label labelL"/>
             </div>
         </div>
-        <div ref={refColM} className='secondCol'>
+        <div ref={refColM} className={`secondCol ${active ? 'fadeInM' : ''}`}>
             <img src={Trident} alt='Trident' className='Trident'/>
             <img src={WaterDrops} alt='WaterDrops' className='WaterDrops'/>
         </div>
-        <div ref={refColR} className='thirdCol'>
+        <div ref={refColR} className={`thirdCol ${active ? 'fadeInR' : ''}`}>
             <h1>Experience</h1>
             <p>Jun 2021-Jun 2022 -- MyBrokerSearch<br/>Web Developer
             </p>

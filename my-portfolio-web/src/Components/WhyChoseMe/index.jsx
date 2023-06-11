@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './style.css';
 import { useGlobalContext } from "../../Context/Context";
 
@@ -15,11 +15,30 @@ export default function WhyChoseMe() {
     const refColMid = useRef(null);
     const refColRight = useRef(null);
 
+    const [active, setIsActive] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const section = document.querySelector(".whyChoseMe");
+            const sectionTop = section.offsetTop;
+            const scrollPosition = window.pageYOffset;
+            if (scrollPosition >= sectionTop - 200) {
+              setIsActive(true);
+            } else {
+              setIsActive(false);
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return(
     <div className={popUpOpen ? 'whyChoseMe bluredSection' : 'whyChoseMe'}>
         <h1 className="sectionTitle">Why I Stand Out</h1>
         <div className="whyChoseContainer">
-            <div ref={refColLeft} className="firstCol charL col1">
+            <div ref={refColLeft} className={`firstCol charL col1 ${active ? 'fadeInL' : ''}`}>
                 <div className="charcteristicL C1">
                     <div>
                         <img src={Experience} alt="Experience" className="characteristics"/>
@@ -39,10 +58,10 @@ export default function WhyChoseMe() {
                     </div>
                 </div>
             </div>
-            <div ref={refColMid} className="secondCol col2">
+            <div ref={refColMid} className={`secondCol col2 ${active ? 'fadeInM' : ''}`}>
                 <img src={Poseidon} alt="Poseidon-3" className="choseMePoseidon"/>
             </div>
-            <div ref={refColRight} className="thirdCol col1">
+            <div ref={refColRight} className={`thirdCol col1 ${active ? 'fadeInR' : ''}`}>
                 <div className="charcteristicR C3">
                     <div>
                         <img src={Collaboration} alt="Collaboration" className="characteristics"/>
