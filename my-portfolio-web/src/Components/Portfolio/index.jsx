@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef} from 'react';
-import { gsap } from "gsap-trial";
 import Popup from 'reactjs-popup';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -63,22 +62,6 @@ export default function Portfolio() {
     const fifthProject = [Project5_1, Project5_2, Project5_3, Project5_4];
     const sixthProject = [Project6_1, Project6_2, Project6_3, Project6_4];
 
-    useEffect(() => {
-        const sectionFadeIn = refSectionFadeIn.current;
-        const fadeIn = gsap.fromTo(sectionFadeIn, {y: 300, opacity: 0}, {
-            opacity: 1, y: 0,
-            scrollTrigger: {
-                trigger: sectionFadeIn,
-                start: 'top',
-                end: '500',
-                scrub: true
-            }
-        });
-
-        return () => {
-            fadeIn.kill();
-        };
-    }, []);
 
     const handleOpen = (index) => {
         setPopUpState(popUpState.map((popup, i) => i === index ? true : false));

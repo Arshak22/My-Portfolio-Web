@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { gsap } from "gsap-trial";
 import './style.css';
 import ProgressBar from "@ramonak/react-progress-bar";
 
@@ -14,48 +13,6 @@ export default function AdditionalInformation() {
     const refColR = useRef(null);
     const ref = useRef(null);
   
-    useEffect(() => {
-      const colL = refColL.current;
-      const colM = refColM.current;
-      const colR = refColR.current;
-
-      const fadeInL = gsap.fromTo(colL, {x: -300, opacity: 0}, {
-        opacity: 1, x: 0,
-        scrollTrigger: {
-          trigger: colL,
-          start: 'top',
-          end: '90%',
-          scrub: true
-        }
-      });
-
-      const fadeInM = gsap.fromTo(colM, {y: 10, opacity: 0}, {
-        opacity: 1, y: 0,
-        scrollTrigger: {
-          trigger: colM,
-          start: 'top',
-          end: '+=50%',
-          scrub: true
-        }
-      });
-
-      const fadeInR = gsap.fromTo(colR, {x: 300, opacity: 0}, {
-        opacity: 1, x: 0,
-        scrollTrigger: {
-          trigger: colR,
-          start: 'top',
-          end: '90%',
-          scrub: true
-        }
-      });
-  
-      return () => {
-        fadeInL.kill();
-        fadeInM.kill();
-        fadeInR.kill();
-      };
-    }, [ref]);
-
     return(
     <div className={popUpOpen ? 'MoreInfo bluredSection' : 'MoreInfo'}>
         <div ref={refColL} className='firstCol'>

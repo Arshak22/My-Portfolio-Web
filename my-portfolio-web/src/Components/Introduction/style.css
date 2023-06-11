@@ -3,12 +3,12 @@
     align-items: center;
     justify-content: center;
     padding-left: 50px;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .mainTitle {
     width: 80%;
     position: relative;
-    top: 5em;
     font-size: 35px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -60,4 +60,36 @@
 .btns {
     position: relative;
     top: 50px;
+}
+
+@media screen and (max-width: 500px) {
+    .introduction {
+        display: block;
+        padding-left: 10px;
+    }
+
+    .mainTitle {
+        width: 100%;
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .mainTitle h1 {
+        line-height: 50px;
+    }
+
+    .text {
+        top: 43%;
+        left: 10px;
+        transform: scale(1.07);
+    }
+
+    .mainTitle div {
+        display: block;
+        margin-top: 3em;
+    }
+
+    .mainPoseidon {
+        top: 3em;
+    }
 }

@@ -29,12 +29,19 @@ body {
   overflow-x: hidden;
 }
 
+html {
+	scroll-behavior: smooth;
+	scroll-snap-type: y proximity;
+}
+  
+
 .PortfolioWeb {
   position: relative;
   width: 100%;
   height: auto;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(1px);
+  overflow: hidden;
 }
 
 code {
@@ -55,8 +62,6 @@ body::-webkit-scrollbar {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-.wave-btn {
 	height: 70px;
     margin-right: 30px;
 	border-radius: var(--button-border-radius);
@@ -83,6 +88,10 @@ body::-webkit-scrollbar {
 
 .wave-btn:hover .wave-btn_waves {
 	top: calc(-1 * 70px);
+}
+
+.wave-btn:hover {
+	transform: scale(1.1);
 }
 
 .wave-btn,
@@ -135,4 +144,16 @@ body::-webkit-scrollbar {
 
 .hiddenScroll {
 	overflow-y: hidden;
+}
+
+@media screen and (max-width: 500px) {
+	.wave-btn {
+		width: 200px;
+		height: 60px;
+		margin-bottom: 20px;
+	}
+
+	.wave-btn_text {
+		font-size: 20px;
+	}
 }

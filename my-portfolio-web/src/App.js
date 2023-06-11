@@ -1,7 +1,4 @@
-import React, { useRef, useState, useEffect, useLayoutEffect } from "react";
-import { gsap } from "gsap-trial";
-import ScrollTrigger from "gsap-trial/ScrollTrigger";
-import ScrollSmoother from "gsap-trial/ScrollSmoother";
+import React, { useRef, useState, useEffect } from "react";
 
 import LoadingPage from "./Components/LoadingPage";
 import Introduction from "./Components/Introduction";
@@ -16,7 +13,6 @@ function App() {
   const wrapperRef = useRef();
   const [isLoading, setIsLoading] = useState(true);
   const contactRef = useRef(null);
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -25,17 +21,6 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  useLayoutEffect(() => {
-    if(ScrollTrigger.isTouch !== 1) {
-      let smoother = ScrollSmoother.create({
-        smooth: 3,
-        effects: true
-      });
-      return () => {
-        smoother.kill();
-      };
-    }
-  }, []);
 
   const scrollToContact = () => {
     contactRef.current.scrollIntoView({
@@ -61,7 +46,7 @@ function App() {
                 <WhyChoseMe />
                 <div ref={contactRef}>
                   <ContactMe />
-                </div>
+                </div> 
                 <Footer />
               </div>
           </div>

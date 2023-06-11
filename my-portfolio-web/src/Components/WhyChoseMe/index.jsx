@@ -1,6 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { gsap } from "gsap-trial";
-import { ScrollTrigger } from "gsap/all";
 import './style.css';
 import { useGlobalContext } from "../../Context/Context";
 
@@ -16,57 +14,6 @@ export default function WhyChoseMe() {
     const refColLeft = useRef(null);
     const refColMid = useRef(null);
     const refColRight = useRef(null);
-
-    useEffect(() => {
-        const setupScrollTrigger = () => {
-          gsap.registerPlugin(ScrollTrigger);
-      
-          const colLeft = refColLeft.current;
-          const colMid = refColMid.current;
-          const colRight = refColRight.current;
-
-          setTimeout(() => {
-            gsap.fromTo(colLeft, {x: -50, opacity: 0}, {
-              opacity: 1,
-              x: 0,
-              scrollTrigger: {
-                trigger: colLeft,
-                start: '-500',
-                end: '50',
-                scrub: true
-              }
-            });
-          }, 300);
-
-          setTimeout(() => {
-            gsap.fromTo(colMid, {y: 50, opacity: 0}, {
-              opacity: 1,
-              y: 0,
-              scrollTrigger: {
-                trigger: colMid,
-                start: '-500',
-                end: '50',
-                scrub: true
-              }
-            });
-          }, 300);
-
-          setTimeout(() => {
-            gsap.fromTo(colRight, {x: 50, opacity: 0}, {
-              opacity: 1,
-              x: 0,
-              scrollTrigger: {
-                trigger: colRight,
-                start: '-500',
-                end: '50',
-                scrub: true
-              }
-            });
-          }, 300);
-        };
-      
-        setupScrollTrigger();
-      }, [refColLeft, refColMid, refColRight]);
 
     return(
     <div className={popUpOpen ? 'whyChoseMe bluredSection' : 'whyChoseMe'}>
