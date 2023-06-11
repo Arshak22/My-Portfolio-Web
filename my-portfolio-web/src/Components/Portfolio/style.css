@@ -310,7 +310,7 @@
     }
     .myPopUp {
         display: block;
-        height: 530px;
+        height: 550px;
         width: 90%;
     }
     .carousel .slider {
@@ -330,6 +330,9 @@
     }
     .popUpInfo h3 {
         font-size: 17px;
+    }
+    .popUpInfo p {
+        font-size: 13px;
     }
     .popup-content {
         top: 8% !important;
