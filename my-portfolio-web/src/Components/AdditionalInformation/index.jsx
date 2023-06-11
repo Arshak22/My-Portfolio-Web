@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from "gsap-trial";
 import './style.css';
 import ProgressBar from "@ramonak/react-progress-bar";
