@@ -292,6 +292,12 @@
     }
 }
 
+@media screen and (max-width: 1920px) and (min-width: 1680px) {
+    .project {
+        width: 575px;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .Portfolio {
         padding-left: 1em;

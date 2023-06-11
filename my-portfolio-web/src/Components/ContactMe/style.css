@@ -99,6 +99,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     -webkit-text-fill-color: var(--white) !important;
 }
 
+@media screen and (max-width: 1920px) and (min-width: 1680px) {
+    .contactMe {
+        padding: 6em 25em;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .contactMe {
         padding: 3em 1em;
