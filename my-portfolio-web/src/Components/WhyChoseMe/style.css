@@ -93,6 +93,8 @@
     }
     .sectionTitle {
         font-size: 40px !important;
+        padding-left: 1em;
+        padding-right: 1em;
     }
     .col1, .col2 {
         width: 100%;

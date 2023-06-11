@@ -104,10 +104,13 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
         padding: 3em 1em;
     }
     .form {
-        padding: 2em;
+        padding: 2em 0.5em;
     }
     .contactMe h1 {
-        font-size: 40px;
+        font-size: 30px;
+    }
+    .contactMe p {
+        font-size: 14px;
     }
     .inputs div .formInp {
         width: 93%;

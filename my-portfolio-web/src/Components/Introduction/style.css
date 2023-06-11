@@ -64,6 +64,8 @@
 
 @media screen and (max-width: 500px) {
     .introduction {
+        position: relative;
+        top: 5em;
         display: block;
         padding-left: 10px;
     }

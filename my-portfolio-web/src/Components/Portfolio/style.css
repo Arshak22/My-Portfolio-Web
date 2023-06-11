@@ -310,8 +310,11 @@
     }
     .myPopUp {
         display: block;
-        height: auto;
+        height: 530px;
         width: 90%;
+    }
+    .carousel .slider {
+        height: 200px;
     }
     .PoseidonPopUpL, .PoseidonPopUpM, .PoseidonPopUpR {
         display: none;
@@ -321,7 +324,6 @@
     }
     .popUpInfo {
         padding: 15px;
-        padding-bottom: 20px;
     }
     .popUpInfo h1 {
         font-size: 20px;
@@ -330,6 +332,7 @@
         font-size: 17px;
     }
     .popup-content {
+        top: 8% !important;
         left: 11% !important;
     }
 }

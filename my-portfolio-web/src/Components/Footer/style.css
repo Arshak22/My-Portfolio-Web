@@ -48,11 +48,15 @@
         width: 100%;
     }
     .footerLogo {
-        width: 200px;
-        left: 20%;
+        width: 150px;
+        left: 28%;
     }
     .footerIcons {
         margin-top: 20px;
         justify-content: center;
+    }
+    .footerIcons .social-icon {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }

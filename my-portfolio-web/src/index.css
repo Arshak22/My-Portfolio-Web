@@ -71,6 +71,7 @@ body::-webkit-scrollbar {
 	overflow: hidden;
     cursor: pointer;
 }
+
 .wave-btn_text {
 	font-family: 'Vollkorn SC', serif;
 	font-size: 25px;
