@@ -22,12 +22,6 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-image: url(../../assets/FinalPics/Atlantis.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    filter: brightness(40%) contrast(130%);
     z-index: -1;
 }
 

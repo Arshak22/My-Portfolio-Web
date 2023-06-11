@@ -20,7 +20,7 @@ body {
   font-family: 'Vollkorn SC', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(./assets/FinalPics/BG1.jpeg);
+  background: url(./assets/FinalPics/BG2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,7 +34,7 @@ body {
   width: 100%;
   height: auto;
   background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(1px);
 }
 
 code {
