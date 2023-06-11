@@ -13,8 +13,9 @@ import SecondText from '../../assets/FinalPics/ChangingText/2.png';
 import ThirdText from '../../assets/FinalPics/ChangingText/3.png';
 import FourthText from '../../assets/FinalPics/ChangingText/4.png';
 
+const imageSources = [FirstText, SecondText, ThirdText, FourthText];
+
 export default function Introduction({ scrollToContact }) {
-  const imageSources = [FirstText, SecondText, ThirdText, FourthText];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const refSection = useRef(null);
