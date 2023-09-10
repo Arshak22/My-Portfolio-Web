@@ -17,7 +17,7 @@ export default function ContactMe() {
 
     emailjs
       .sendForm(
-        'service_8tfn3j5',
+        'service_1ar545g',
         'template_9dqwxue',
         form.current,
         'FBjZsrEn67HWqOmf1'

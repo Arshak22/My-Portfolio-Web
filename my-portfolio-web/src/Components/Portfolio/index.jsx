@@ -56,11 +56,17 @@ import Project7_2 from '../../assets/PortfolioWebPics/7-2.jpg';
 import Project7_3 from '../../assets/PortfolioWebPics/7-3.jpg';
 import Project7_4 from '../../assets/PortfolioWebPics/7-4.jpg';
 
+//Project-8
+import Project8_1 from '../../assets/PortfolioWebPics/8-1.jpg';
+import Project8_2 from '../../assets/PortfolioWebPics/8-2.jpg';
+import Project8_3 from '../../assets/PortfolioWebPics/8-3.jpg';
+import Project8_4 from '../../assets/PortfolioWebPics/8-4.jpg';
+
 export default function Portfolio() {
   const { popUpOpen, setPopUpOpen } = useGlobalContext();
   const [active, setIsActive] = useState(false);
   const refSectionFadeIn = useRef(null);
-  const [popUpState, setPopUpState] = useState(Array(7).fill(false));
+  const [popUpState, setPopUpState] = useState(Array(8).fill(false));
   const firstProject = [Project1_1, Project1_2, Project1_3, Project1_4];
   const secondProject = [Project2_1, Project2_2, Project2_3, Project2_4];
   const thirdProject = [Project3_1, Project3_2, Project3_3, Project3_4];
@@ -68,6 +74,7 @@ export default function Portfolio() {
   const fifthProject = [Project5_1, Project5_2, Project5_3, Project5_4];
   const sixthProject = [Project6_1, Project6_2, Project6_3, Project6_4];
   const seventhProject = [Project7_1, Project7_2, Project7_3, Project7_4];
+  const eightProject = [Project8_1, Project8_2, Project8_3, Project8_4];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -93,7 +100,7 @@ export default function Portfolio() {
   };
 
   const handleClose = () => {
-    setPopUpState(Array(7).fill(false));
+    setPopUpState(Array(8).fill(false));
     document.body.classList.remove('hiddenScroll');
     setPopUpOpen(false);
   };
@@ -171,6 +178,128 @@ export default function Portfolio() {
           <Popup
             trigger={
               <div className='project fadeInProject'>
+                <img src={Project8_1} alt='Project-8' />
+              </div>
+            }
+            position='center'
+            open={popUpState[8]}
+            onOpen={() => handleOpen(8)}
+            onClose={handleClose}
+          >
+            {(close) => (
+              <div className='popUpContainer'>
+                <div className='myPopUp'>
+                  <div className='popUpSlider'>
+                    <Carousel
+                      showThumbs={false}
+                      autoPlay={true}
+                      infiniteLoop={true}
+                      showArrows={false}
+                      showIndicators={false}
+                      swipeable={true}
+                      emulateTouch={true}
+                      dynamicHeight={false}
+                    >
+                      {eightProject.map((image, index) => (
+                        <div key={index} className='sliderImages'>
+                          <img src={image} alt={`Image ${index + 1}`} />
+                        </div>
+                      ))}
+                    </Carousel>
+                  </div>
+                  <div className='popUpInfo'>
+                    <h1>
+                      Xbox Gamepad Store
+                    </h1>
+                    <h3>Shop Website</h3>
+                    <p>
+                      The Xbox Gamepad Shop is an online retail platform dedicated to Xbox controllers. This project incorporates a 3D model created using Three.js, providing visitors with an interactive shopping experience and demonstrating my adeptness at implementing this technology.
+                    </p>
+                    <a
+                      href='https://xperiencexpad.netlify.app/'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <button className='popBtn'>View Live</button>
+                    </a>
+                  </div>
+                  <button onClick={close} className='closeBtn'>
+                    <ImCross />
+                  </button>
+                </div>
+                <img
+                  src={PoseidonPopUpM}
+                  alt='PoseidonPopUpM'
+                  className='PoseidonPopUpM'
+                />
+              </div>
+            )}
+          </Popup>
+          <Popup
+            trigger={
+              <div className='project fadeInProject'>
+                <img src={Project7_1} alt='Project-7' />
+              </div>
+            }
+            position='center'
+            open={popUpState[7]}
+            onOpen={() => handleOpen(7)}
+            onClose={handleClose}
+          >
+            {(close) => (
+              <div className='popUpContainer'>
+                <div className='myPopUp'>
+                  <div className='popUpSlider'>
+                    <Carousel
+                      showThumbs={false}
+                      autoPlay={true}
+                      infiniteLoop={true}
+                      showArrows={false}
+                      showIndicators={false}
+                      swipeable={true}
+                      emulateTouch={true}
+                      dynamicHeight={false}
+                    >
+                      {seventhProject.map((image, index) => (
+                        <div key={index} className='sliderImages'>
+                          <img src={image} alt={`Image ${index + 1}`} />
+                        </div>
+                      ))}
+                    </Carousel>
+                  </div>
+                  <div className='popUpInfo'>
+                    <h1>Team2B Relocation</h1>
+                    <h3>Company Website</h3>
+                    <p>
+                      Explore our comprehensive relocation website designed to
+                      streamline your move. Simplify accounting, taxes, and
+                      consulting with our expert services. Navigate the
+                      complexities effortlessly and embrace your new beginning
+                      with confidence.
+                    </p>
+                    <a
+                      href='https://team2b.am/relocation/'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <button className='popBtn'>View Live</button>
+                    </a>
+                  </div>
+                  <button onClick={close} className='closeBtn'>
+                    <ImCross />
+                  </button>
+                </div>
+                <img
+                  src={PoseidonPopUpR}
+                  alt='PoseidonPopUpR'
+                  className='PoseidonPopUpR'
+                />
+              </div>
+            )}
+          </Popup>
+          <Popup
+            trigger={
+              <div className='project fadeInProject'>
                 <img src={Project2_1} alt='Project-2' />
               </div>
             }
@@ -226,9 +355,9 @@ export default function Portfolio() {
                   </button>
                 </div>
                 <img
-                  src={PoseidonPopUpM}
-                  alt='PoseidonPopUpM'
-                  className='PoseidonPopUpM'
+                  src={PoseidonPopUpL}
+                  alt='PoseidonPopUpL'
+                  className='PoseidonPopUpL'
                 />
               </div>
             )}
@@ -292,9 +421,9 @@ export default function Portfolio() {
                   </button>
                 </div>
                 <img
-                  src={PoseidonPopUpR}
-                  alt='PoseidonPopUpR'
-                  className='PoseidonPopUpR'
+                  src={PoseidonPopUpM}
+                  alt='PoseidonPopUpM'
+                  className='PoseidonPopUpM'
                 />
               </div>
             )}
@@ -357,9 +486,9 @@ export default function Portfolio() {
                   </button>
                 </div>
                 <img
-                  src={PoseidonPopUpL}
-                  alt='PoseidonPopUpL'
-                  className='PoseidonPopUpL'
+                  src={PoseidonPopUpR}
+                  alt='PoseidonPopUpR'
+                  className='PoseidonPopUpR'
                 />
               </div>
             )}
@@ -410,7 +539,7 @@ export default function Portfolio() {
                       platform effortlessly connects you with potential buyers
                       and sellers.
                     </p>
-                    <a
+                   <a
                       href='https://demo107.tcy.nsq.mybluehost.me/'
                       target='_blank'
                       rel='noopener noreferrer'
@@ -423,9 +552,9 @@ export default function Portfolio() {
                   </button>
                 </div>
                 <img
-                  src={PoseidonPopUpM}
-                  alt='PoseidonPopUpM'
-                  className='PoseidonPopUpM'
+                  src={PoseidonPopUpL}
+                  alt='PoseidonPopUpL'
+                  className='PoseidonPopUpL'
                 />
               </div>
             )}
@@ -492,68 +621,6 @@ export default function Portfolio() {
                   src={PoseidonPopUpR}
                   alt='PoseidonPopUpR'
                   className='PoseidonPopUpR'
-                />
-              </div>
-            )}
-          </Popup>
-          <Popup
-            trigger={
-              <div className='project fadeInProject'>
-                <img src={Project7_1} alt='Project-7' />
-              </div>
-            }
-            position='center'
-            open={popUpState[7]}
-            onOpen={() => handleOpen(7)}
-            onClose={handleClose}
-          >
-            {(close) => (
-              <div className='popUpContainer'>
-                <div className='myPopUp'>
-                  <div className='popUpSlider'>
-                    <Carousel
-                      showThumbs={false}
-                      autoPlay={true}
-                      infiniteLoop={true}
-                      showArrows={false}
-                      showIndicators={false}
-                      swipeable={true}
-                      emulateTouch={true}
-                      dynamicHeight={false}
-                    >
-                      {seventhProject.map((image, index) => (
-                        <div key={index} className='sliderImages'>
-                          <img src={image} alt={`Image ${index + 1}`} />
-                        </div>
-                      ))}
-                    </Carousel>
-                  </div>
-                  <div className='popUpInfo'>
-                    <h1>Team2B Relocation</h1>
-                    <h3>Company Website</h3>
-                    <p>
-                      Explore our comprehensive relocation website designed to
-                      streamline your move. Simplify accounting, taxes, and
-                      consulting with our expert services. Navigate the
-                      complexities effortlessly and embrace your new beginning
-                      with confidence.
-                    </p>
-                    <a
-                      href='https://team2b.am/relocation/'
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
-                      <button className='popBtn'>View Live</button>
-                    </a>
-                  </div>
-                  <button onClick={close} className='closeBtn'>
-                    <ImCross />
-                  </button>
-                </div>
-                <img
-                  src={PoseidonPopUpM}
-                  alt='PoseidonPopUpM'
-                  className='PoseidonPopUpM'
                 />
               </div>
             )}
