@@ -78,7 +78,7 @@ export default function AdditionalInformation() {
             </p>
             <h1 className='top-margin'>Skills</h1>
             <div className='progressSectionR'>
-                <ProgressBar completed={85} customLabel="React JS / JavaScript" dir='ltr' className="wrapperBar"
+                <ProgressBar completed={85} customLabel="React JS / Three JS / JavaScript" dir='ltr' className="wrapperBar"
                 barContainerClassName="container"
                 completedClassName="barCompleted barCompletedR bar-4"
                 labelClassName="label labelR"/>
