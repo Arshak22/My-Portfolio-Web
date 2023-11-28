@@ -268,17 +268,13 @@ export default function Portfolio() {
                     </Carousel>
                   </div>
                   <div className='popUpInfo'>
-                    <h1>Team2B Relocation</h1>
+                    <h1>Team2B</h1>
                     <h3>Company Website</h3>
                     <p>
-                      Explore our comprehensive relocation website designed to
-                      streamline your move. Simplify accounting, taxes, and
-                      consulting with our expert services. Navigate the
-                      complexities effortlessly and embrace your new beginning
-                      with confidence.
+                    Crafted a dynamic, multilingual website for Team2B, a versatile company providing services in accounting, marketing, and video production. The site serves a diverse audience in three languages, elevating the company's online presence and accessibility.
                     </p>
                     <a
-                      href='https://team2b.am/relocation/'
+                      href='https://team2b.am/'
                       target='_blank'
                       rel='noopener noreferrer'
                     >
@@ -474,7 +470,7 @@ export default function Portfolio() {
                       engagement tools for effective client connections.
                     </p>
                     <a
-                      href='https://demo97.tcy.nsq.mybluehost.me/'
+                      href='https://demo8.mbswebsite.com/'
                       target='_blank'
                       rel='noopener noreferrer'
                     >
@@ -540,7 +536,7 @@ export default function Portfolio() {
                       and sellers.
                     </p>
                    <a
-                      href='https://demo107.tcy.nsq.mybluehost.me/'
+                      href='https://www.demo1.mbswebsite.com/'
                       target='_blank'
                       rel='noopener noreferrer'
                     >
@@ -606,7 +602,7 @@ export default function Portfolio() {
                       with clients.
                     </p>
                     <a
-                      href='https://demo82.tcy.nsq.mybluehost.me/'
+                      href='https://demo13.mbswebsite.com/'
                       target='_blank'
                       rel='noopener noreferrer'
                     >
