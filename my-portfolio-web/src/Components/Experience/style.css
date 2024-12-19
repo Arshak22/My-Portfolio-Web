@@ -1,0 +1,56 @@
+.experience {
+  height: 800px;
+  position: relative;
+}
+
+.education {
+  position: absolute;
+  left: 0;
+  top: 20%;
+  width: 35%;
+  padding-left: 4em;
+}
+
+.experience-block {
+  right: 0;
+  left: auto;
+  padding-right: 4em;
+}
+
+.education h1 {
+  font-size: 30px;
+  letter-spacing: 1px;
+  background-image: linear-gradient(to right, #ad20ff 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.education p {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+.education ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.education ul li {
+  margin-right: 40px;
+}
+
+.small-icon {
+  font-size: 25px;
+  position: relative;
+  right: 5px;
+  top: 7px;
+}
+
+.small-icon path {
+  stroke: #b828ff;
+}

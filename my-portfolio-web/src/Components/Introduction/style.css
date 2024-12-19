@@ -1,103 +1,39 @@
 .introduction {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 50px;
-    transition: opacity 0.5s ease-in-out;
+  height: 800px;
+  position: relative;
+  margin-top: -5em;
+}
+
+.title-section {
+  position: absolute;
+  bottom: 10em;
+  left: 4em;
 }
 
 .mainTitle {
-    width: 80%;
-    position: relative;
-    font-size: 35px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    word-wrap: break-word;
-    z-index: 2;
+  font-size: 70px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+  z-index: 2;
 }
 
-.mainTitle div {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 4em;
+.mainTitle-2 {
+  font-size: 50px;
+  background-image: linear-gradient(to right, #ad20ff 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.mainTitle h1 {
-    line-height: 80px;
-}
-
-.mainPoseidon {
-    position: relative;
-    top: 0em;
-    max-width: 100%;
-    transform: scale(1.5);
-    z-index: 1;
-    margin-top: 60px;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2)) brightness(90%);
-}
-
-.text {
-    position: absolute;
-    top: 40%;
-    left: 0;
-    max-width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 1s ease;
-    margin-bottom: 20px;
-}
-  
-.text.active {
-    opacity: 1;
-}
-
-.btnIcon {
-    position: relative;
-    top: 3px;
-}
-
-.btns {
-    position: relative;
-    top: 50px;
-}
-
-@media screen and (max-width: 1920px) and (min-width: 1680px) {
-    .btns {
-        top: 3em;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .introduction {
-        position: relative;
-        top: 5em;
-        display: block;
-        padding-left: 10px;
-    }
-
-    .mainTitle {
-        width: 100%;
-        margin-top: 30px;
-        font-size: 20px;
-    }
-
-    .mainTitle h1 {
-        line-height: 50px;
-    }
-
-    .text {
-        top: 43%;
-        left: 10px;
-        transform: scale(1.07);
-    }
-
-    .mainTitle div {
-        display: block;
-        margin-top: 3em;
-    }
-
-    .mainPoseidon {
-        top: 3em;
-    }
+.contact-me img {
+  width: 100%;
+  max-width: 100%;
+  position: fixed;
+  right: -39%;
+  bottom: -18%;
+  height: 500px;
+  transform: scale(0.4);
+  filter: drop-shadow(2px 2px 2px #b0b0b0b3);
+  object-fit: contain;
+  z-index: 50;
 }

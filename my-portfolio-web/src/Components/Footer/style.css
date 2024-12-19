@@ -1,62 +1,72 @@
 .footer {
-    width: 100%;
-    height: auto;
-    background-color: var(--bg);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-left: 30px;
-    padding-top: 1em;
-    padding-bottom: 1em;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(90deg, rgb(150 0 249) 0%, rgb(0 8 198) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .footerLogo {
-    position: relative;
-    left: 60px;
-    max-width: 100%;
-    width: 100px;
+  position: relative;
+  left: 60px;
+  max-width: 100%;
+  width: 100px;
 }
 
 .footerIcons {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .footer h3 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    letter-spacing: 1px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .footerIcons .social-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
 }
 
 .footer div {
-    width: 33%;
+  width: 33%;
+}
+
+.footer .social-icons-bio ul {
+  margin: 0;
+}
+
+.footer .social-icons-bio ul li a span:nth-child(1),
+.footer .social-icons-bio ul li a span:nth-child(3),
+.footer .social-icons-bio ul li a span:nth-child(2),
+.footer .social-icons-bio ul li a span:nth-child(4) {
+  background: var(--white);
 }
 
 @media screen and (max-width: 500px) {
-    .footer {
-        display: block;
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-bottom: 3em;
-    }
-    .footer div {
-        width: 100%;
-    }
-    .footerLogo {
-        width: 150px;
-        left: 28%;
-    }
-    .footerIcons {
-        margin-top: 20px;
-        justify-content: center;
-    }
-    .footerIcons .social-icon {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+  .footer {
+    display: block;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 3em;
+  }
+  .footer div {
+    width: 100%;
+  }
+  .footerLogo {
+    width: 150px;
+    left: 28%;
+  }
+  .footerIcons {
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .footerIcons .social-icon {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }

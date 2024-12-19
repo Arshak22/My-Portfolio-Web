@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Orbitron:wght@400..900&display=swap');
 
 * {
   margin: 0;
@@ -8,7 +8,7 @@
 
 :root {
   --light-blue: #003fb3;
-  --bg: #080026;
+  --bg: rgb(0, 0, 0);
   --white: #ffffff;
   --button-border-radius: 7px;
   --transition-all: all 0.5s ease 0s;
@@ -17,31 +17,18 @@
 
 body {
   margin: 0;
-  font-family: 'Vollkorn SC', serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: url(./assets/FinalPics/BG2.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  font-family: 'Orbitron', sans-serif;
+  background-color: var(--bg);
   color: var(--white);
   overflow-x: hidden;
 }
 
-html {
-	scroll-behavior: smooth;
-	scroll-snap-type: y proximity;
+strong {
+  font-family: 'Orbitron', sans-serif;
 }
-  
 
-.PortfolioWeb {
-  position: relative;
-  width: 100%;
-  height: auto;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(1px);
-  overflow: hidden;
+p {
+  font-family: 'RobotoMono', sans-serif;
 }
 
 code {
@@ -54,107 +41,11 @@ body::-webkit-scrollbar {
 }
 
 ::selection {
-	background: rgb(0, 32, 176);
-	color: var(--white);
+  background: rgb(88, 0, 176);
+  color: var(--white);
+  -webkit-text-fill-color: var(--white);
 }
 
-.wave-btn {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 70px;
-    margin-right: 30px;
-	border-radius: var(--button-border-radius);
-    border: 3px solid var(--white);
-	transition: var(--transition-all);
-	text-decoration: none;
-	overflow: hidden;
-    cursor: pointer;
-}
-
-.wave-btn_text {
-	font-family: 'Vollkorn SC', serif;
-	font-size: 25px;
-    font-weight: 600;
-	z-index: 1;
-	color: var(--white);
-	text-transform: uppercase;
-	letter-spacing: 2px;
-}
-
-.wave-btn,
-.wave-btn_text {
-	position: relative;
-}
-
-.wave-btn:hover .wave-btn_waves {
-	top: calc(-1 * 70px);
-}
-
-.wave-btn:hover {
-	transform: scale(1.1);
-}
-
-.wave-btn,
-.wave-btn_waves {
-	width: 300px;
-}
-
-.wave-btn_waves {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 300px;
-	background: linear-gradient(180deg, rgb(0, 78, 203) 0%, rgba(0,110,181,1) 50%, rgba(0,29,158,1) 100%);
-	box-shadow: inset 0 0 5rem rgb(0, 0, 0);
-	transition: var(--transition-all);
-}
-
-.wave-btn_waves:after,
-.wave-btn_waves:before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 250%;
-	height: 250%;
-	transform: var(--defaut-wave-transform) rotate(0deg);
-}
-
-.wave-btn_waves:before {
-	background-color: var(--bg);
-	border-radius: 48%;
-	animation: waves 5s infinite linear;
-}
-
-.wave-btn_waves:after {
-	background-color: var(--bg);
-	opacity: 0.5;
-	border-radius: 44%;
-	animation: waves 10s infinite linear;
-}
-
-@keyframes waves {
-	0% {
-		transform: var(--defaut-wave-transform) rotate(0deg);
-	}
-	100% {
-		transform: var(--defaut-wave-transform) rotate(360deg);
-	}
-}
-
-.hiddenScroll {
-	overflow-y: hidden;
-}
-
-@media screen and (max-width: 500px) {
-	.wave-btn {
-		width: 200px;
-		height: 60px;
-		margin-bottom: 20px;
-	}
-
-	.wave-btn_text {
-		font-size: 20px;
-	}
+img::selection, button::selection {
+  background: transparent;
 }

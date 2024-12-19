@@ -1,11 +1,14 @@
 .loading {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: #020019;
+    overflow-x: hidden;
+    z-index: 999;
 }
+
 
 .loading img {
     max-width: 100%;

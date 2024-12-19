@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import './style.css';
-
-import Logo from '../../assets/FinalPics/FinalLogo.png';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 export default function LoadingPage() {
-    return(
-    <div className="loading">
-        <img src={Logo} alt="Logo" className="mainLogo"/>
-    </div>);
-};
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
+  return (
+    <div className='loading'>
+      <DotLottieReact
+        src='https://lottie.host/64303272-e34b-4998-af65-b2f842870fba/Qattu9Ncpp.lottie'
+        loop
+        autoplay
+      />
+    </div>
+  );
+}

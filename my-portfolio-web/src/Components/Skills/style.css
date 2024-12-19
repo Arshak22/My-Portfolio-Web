@@ -1,0 +1,71 @@
+.skills {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg);
+  align-items: center;
+  margin-top: -4em;
+  padding-top: 5em;
+}
+
+.skills h1 {
+  font-size: 45px;
+  letter-spacing: 1px;
+  padding-bottom: 5em;
+  padding-top: 5em;
+  background-image: linear-gradient(to right, #ad20ff 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skill-icon {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  background-color: #ffffff;
+  filter: drop-shadow(0px 0px 30px #a200ffb3) contrast(1.2);
+  border-radius: 50%;
+  padding: 25px;
+  overflow: visible;
+  left: 0;
+  bottom: 0;
+}
+
+.html-icon {
+  left: 20%;
+}
+
+.css-icon {
+  left: 5%;
+  bottom: 32%;
+}
+
+.js-icon {
+  left: 20%;
+  bottom: 65%;
+}
+
+.react-icon {
+  left: 45%;
+  bottom: 60%;
+}
+
+.typescript-icon {
+  left: 70%;
+  bottom: 65%;
+}
+
+.wordpress-icon {
+  bottom: 32%;
+  right: 5%;
+  left: auto;
+}
+
+.spline-icon {
+  left: 70%;
+}
+
+.three-icon {
+  left: 45%;
+  bottom: 5%;
+}

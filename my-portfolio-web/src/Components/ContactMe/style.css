@@ -1,124 +1,187 @@
 .contactMe {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 6em 15em;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 6em 15em;
 }
 
-.contactMe::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-image: url(../../assets/Gif/Earth.gif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    filter: brightness(150%) contrast(100%) hue-rotate(314deg) saturate(2);
-    z-index: -1;
-}
-
-.contactMe h1 {
-    font-family: 'Vollkorn SC', serif;
-    font-size: 50px;
-    text-align: center;
+.contactMe h2 {
+  font-size: 45px;
+  letter-spacing: 1px;
+  text-align: center;
+  background-image: linear-gradient(to right, #ad20ff 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .contactMe p {
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    letter-spacing: 1px;
-    font-size: 17px;
-    margin-bottom: 15px;
+  text-align: center;
+  font-family: 'RobotoMono', sans-serif;
+  letter-spacing: 1px;
+  font-size: 17px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .form {
-    width: 100%;
-    border-radius: 10px;
-    padding: 3em 12em;
-    background-color: #000000e5;
-    box-shadow: 0 0 10px 3px #adadad87;
+  width: 100%;
+  padding: 3em 12em;
 }
 
 .inputs {
-    display: grid;
+  display: grid;
 }
 
 .inputs div {
-    width: 100%;
+  width: 100%;
 }
 
 .inputs div .formInp {
-    width: 47%;
+  width: 47%;
 }
 
 .formInp {
-    background-color: transparent;
-    border: 3px solid var(--white);
-    border-radius: 5px;
-    padding: 10px;
-    color: var(--white);
-    margin: 10px;
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background: transparent;
-    transition: all 0.5s ease;
+  background-color: transparent;
+  border: 3px solid var(--white);
+  padding: 10px;
+  color: var(--white);
+  margin: 10px;
+  font-size: 20px;
+  font-family: 'RobotoMono', sans-serif;
+  background: transparent;
+  transition: all 0.5s ease;
 }
 
 .formSubmit {
-    height: 60px;
-    width: 200px;
-    margin: 10px auto;
-    transform: scale(0.85);
+  height: 60px;
+  width: 200px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
 }
 
 .formSubmit .wave-btn_waves {
-    left: -50px;
+  left: -50px;
 }
 
 .formInp:focus-visible {
-    outline: none !important;
-    background: linear-gradient(180deg, rgb(0, 162, 198) 0%, rgb(0, 83, 172) 40%, rgb(0, 21, 113) 100%);
+  outline: none !important;
+  background: linear-gradient(90deg, rgb(150 0 249) 0%, rgb(0 8 198) 100%);
 }
 
 .formInp::placeholder {
-    color: var(--white);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: var(--white);
+  font-family: 'Orbitron', sans-serif;
 }
 
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
-    -webkit-transition-delay: 9999s;
-     transition-delay: 9999s;
-    background-color: transparent !important;
-    -webkit-text-fill-color: var(--white) !important;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition-delay: 9999s;
+  transition-delay: 9999s;
+  background-color: transparent !important;
+  -webkit-text-fill-color: var(--white) !important;
+}
+
+.formSubmit a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 200px;
+  height: 55px;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 20px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.formSubmit a span {
+  position: absolute;
+  transition: transform 0.5s;
+}
+.formSubmit a span:nth-child(1),
+.formSubmit a span:nth-child(3) {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, rgb(150 0 249) 0%, rgb(0 8 198) 100%);
+}
+.formSubmit a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: right;
+}
+.formSubmit a:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.formSubmit a span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+}
+.formSubmit a:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.formSubmit a span:nth-child(2),
+.formSubmit a span:nth-child(4) {
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(90deg, rgb(150 0 249) 0%, rgb(0 8 198) 100%);
+}
+.formSubmit a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+}
+.formSubmit a:hover span:nth-child(2) {
+  transform: scale(1);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+.formSubmit a span:nth-child(4) {
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  transform-origin: top;
+}
+.formSubmit a:hover span:nth-child(4) {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
 }
 
 @media screen and (max-width: 1920px) and (min-width: 1680px) {
-    .contactMe {
-        padding: 6em 25em;
-    }
+  .contactMe {
+    padding: 6em 25em;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .contactMe {
-        padding: 3em 1em;
-    }
-    .form {
-        padding: 2em 0.5em;
-    }
-    .contactMe h1 {
-        font-size: 30px;
-    }
-    .contactMe p {
-        font-size: 14px;
-    }
-    .inputs div .formInp {
-        width: 93%;
-    }
+  .contactMe {
+    padding: 3em 1em;
+  }
+  .form {
+    padding: 2em 0.5em;
+  }
+  .contactMe h1 {
+    font-size: 30px;
+  }
+  .contactMe p {
+    font-size: 14px;
+  }
+  .inputs div .formInp {
+    width: 93%;
+  }
 }

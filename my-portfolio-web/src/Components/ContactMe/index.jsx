@@ -27,9 +27,7 @@ export default function ContactMe() {
           setMessage('Email was succesfully sent');
         },
         (error) => {
-          setMessage(
-            'Oops something went wrong, please check your inputs'
-          );
+          setMessage('Oops something went wrong, please check your inputs');
         }
       );
 
@@ -39,7 +37,7 @@ export default function ContactMe() {
   return (
     <div className='contactMe'>
       <div className='form'>
-        <h1>Reach Out to Me</h1>
+        <h2>Reach Out to Me</h2>
         <p>
           Ride the waves of Poseidon's realm. Reach out using the form below,
           and let's embark on a digital odyssey together.
@@ -71,8 +69,12 @@ export default function ContactMe() {
             ></textarea>
           </div>
           <button type='submit' className='wave-btn formSubmit'>
-            <span className='wave-btn_text'>Send</span>
-            <span className='wave-btn_waves'></span>
+            <a>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>Send
+            </a>
           </button>
           <p>{message}</p>
         </form>
