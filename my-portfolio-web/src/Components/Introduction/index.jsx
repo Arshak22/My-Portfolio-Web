@@ -10,7 +10,10 @@ export default function Introduction({ scrollToContact }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const distanceFromBottom = document.documentElement.scrollHeight - window.scrollY - window.innerHeight;
+      const distanceFromBottom =
+        document.documentElement.scrollHeight -
+        window.scrollY -
+        window.innerHeight;
 
       if (distanceFromBottom < 800) {
         setIsContactVisible(false);
@@ -41,9 +44,12 @@ export default function Introduction({ scrollToContact }) {
           <h2 className='mainTitle mainTitle-2'>Your Future Web Developer</h2>
         </div>
       </div>
-      
-      <div className='contact-me' style={{ visibility: isContactVisible ? 'visible' : 'hidden' }}>
-        <img src={Robot} alt='Robot-Contact-Me' />
+
+      <div
+        className='contact-me'
+        style={{ visibility: isContactVisible ? 'visible' : 'hidden' }}
+      >
+        <img src={Robot} alt='Robot-Contact-Me' onClick={scrollToContact} />
       </div>
     </>
   );

@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-
 import Introduction from "./Components/Introduction";
 import BIO from "./Components/BIO";
 import ContactMe from "./Components/ContactMe";
@@ -10,8 +9,31 @@ import Portfolio from "./Components/Portfolio";
 import Footer from "./Components/Footer";
 
 function App() {
-  const wrapperRef = useRef();
+  const bioRef = useRef(null);
+  const expRef = useRef(null);
+  const portfolioRef = useRef(null);
   const contactRef = useRef(null);
+
+  const scrollToBIO = () => {
+    bioRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const scrollToExp = () => {
+    expRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const scrollToPortfolio = () => {
+    portfolioRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   const scrollToContact = () => {
     contactRef.current.scrollIntoView({
@@ -21,20 +43,28 @@ function App() {
   };
 
   return (
-    <div ref={wrapperRef} id="smooth-wrapper" className="PortfolioWeb">
+    <div id="smooth-wrapper" className="PortfolioWeb">
       <div id="smooth-content">
-        <div>
-          <Header />
-          <Introduction scrollToContact={scrollToContact} />
+        <Header
+          scrollToBIO={scrollToBIO}
+          scrollToExp={scrollToExp}
+          scrollToPortfolio={scrollToPortfolio}
+        />
+        <Introduction scrollToContact={scrollToContact} />
+        <div ref={bioRef}>
           <BIO />
-          <Experience />
-          <Skills />
-          <Portfolio />
-          <div ref={contactRef}>
-            <ContactMe />
-          </div>
-          <Footer />
         </div>
+        <div ref={expRef}>
+          <Experience />
+        </div>
+        <Skills />
+        <div ref={portfolioRef}>
+          <Portfolio />
+        </div>
+        <div ref={contactRef}>
+          <ContactMe />
+        </div>
+        <Footer />
       </div>
     </div>
   );

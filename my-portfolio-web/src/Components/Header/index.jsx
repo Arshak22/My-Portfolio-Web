@@ -3,7 +3,11 @@ import './style.css';
 
 import Resume from '../../Resume/Arshak_Kosakyan_CV.pdf';
 
-export default function Header() {
+export default function Header({
+  scrollToBIO,
+  scrollToExp,
+  scrollToPortfolio,
+}) {
   const downloadResume = () => {
     const fileUrl = Resume;
     const fileName = 'Arshak_Kosakyan_CV.pdf';
@@ -16,7 +20,7 @@ export default function Header() {
     <div className='header'>
       <ul>
         <li>
-          <a href='#'>
+          <a onClick={scrollToBIO}>
             <span></span>
             <span></span>
             <span></span>
@@ -25,7 +29,7 @@ export default function Header() {
           </a>
         </li>
         <li>
-          <a href='#'>
+          <a onClick={scrollToExp}>
             <span></span>
             <span></span>
             <span></span>
@@ -34,7 +38,7 @@ export default function Header() {
           </a>
         </li>
         <li>
-          <a href='#'>
+          <a onClick={scrollToPortfolio}>
             <span></span>
             <span></span>
             <span></span>
@@ -43,7 +47,7 @@ export default function Header() {
           </a>
         </li>
         <li>
-          <a href='#' onClick={downloadResume}>
+          <a onClick={downloadResume}>
             <span></span>
             <span></span>
             <span></span>
