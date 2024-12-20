@@ -35,7 +35,7 @@ export default function Experience() {
   return (
     <div className='experience'  ref={sectionRef}>
       {isLoaded && (
-        <Spline scene="https://prod.spline.design/AXZwiGeimzz1Ghzf/scene.splinecode" />
+        <Spline scene="https://prod.spline.design/AXZwiGeimzz1Ghzf/scene.splinecode" className='cube-and-circles'/>
       )}
       <div className='education'>
         <h1>Education and Languages</h1>

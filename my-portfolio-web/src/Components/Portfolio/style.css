@@ -220,3 +220,25 @@
 .website-figure.hover figcaption p {
   opacity: 1;
 }
+
+@media screen and (max-width: 1550px) and (min-width: 600px) {
+  .website-figure {
+    max-width: 385px;
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .portfolio h2 {
+    font-size: 40px;
+  }
+  .portfolio-websites {
+    width: 100%;
+  }
+  .website-figure {
+    margin-left: 40px;
+    max-width: 100%;
+    width: 85%;
+    height: 235px;
+  }
+}

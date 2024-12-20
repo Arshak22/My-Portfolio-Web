@@ -37,3 +37,19 @@
   object-fit: contain;
   z-index: 50;
 }
+
+@media screen and (max-width: 500px) {
+  .title-section {
+    left: 4em;
+    bottom: 6em;
+  }
+  .mainTitle {
+    font-size: 45px;
+  }
+  .mainTitle-2 {
+    font-size: 35px;
+  }
+  .contact-me {
+    display: none;
+  }
+}

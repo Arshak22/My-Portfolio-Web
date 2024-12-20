@@ -8,6 +8,7 @@
 .contactMe h2 {
   font-size: 45px;
   letter-spacing: 1px;
+  margin-bottom: 20px;
   text-align: center;
   background-image: linear-gradient(to right, #ad20ff 0%, #ffffff 100%);
   -webkit-background-clip: text;
@@ -168,6 +169,12 @@ input:-webkit-autofill:active {
   }
 }
 
+@media screen and (max-width: 1450px) and (min-width: 600px) {
+  .form {
+    padding: 3em 4em;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .contactMe {
     padding: 3em 1em;
@@ -182,6 +189,17 @@ input:-webkit-autofill:active {
     font-size: 14px;
   }
   .inputs div .formInp {
-    width: 93%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  textarea.formInp {
+    width: 100%;
+  }
+  .contactMe h2 {
+    font-size: 40px;
+  }
+  .inputs {
+    justify-content: center;
   }
 }

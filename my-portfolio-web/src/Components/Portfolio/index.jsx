@@ -133,7 +133,7 @@ export default function Portfolio() {
                 Introducing my creation, a cutting-edge Real Estate Agent
                 Website that revolutionizes the way buyers and sellers connect
               </p>
-              <div class='icons'>
+              {/* <div class='icons'>
                 <a
                   href='https://demo1.mbswebsite.com/'
                   target='_blank'
@@ -141,7 +141,7 @@ export default function Portfolio() {
                 >
                   <BsFillArrowUpRightSquareFill />
                 </a>
-              </div>
+              </div> */}
             </figcaption>
           </figure>
           <figure class='website-figure'>
@@ -176,11 +176,11 @@ export default function Portfolio() {
                 expertise, services, and personal brand, helping them connect
                 with clients effectivel
               </p>
-              <div class='icons'>
+              {/* <div class='icons'>
                 <a href='#'>
                   <BsFillArrowUpRightSquareFill />
                 </a>
-              </div>
+              </div> */}
             </figcaption>
           </figure>
           <figure class='website-figure'>
@@ -193,11 +193,11 @@ export default function Portfolio() {
                 Seamlessly showcase your services, expertise, and personalized
                 branding, while effortlessly connecting with clients
               </p>
-              <div class='icons'>
+              {/* <div class='icons'>
                 <a href='#'>
                   <BsFillArrowUpRightSquareFill />
                 </a>
-              </div>
+              </div> */}
             </figcaption>
           </figure>
           <figure class='website-figure'>
@@ -208,11 +208,11 @@ export default function Portfolio() {
                 Elevate your real estate brand with a dynamic website template
                 designed exclusively for agents
               </p>
-              <div class='icons'>
+              {/* <div class='icons'>
                 <a href='#'>
                   <BsFillArrowUpRightSquareFill />
                 </a>
-              </div>
+              </div> */}
             </figcaption>
           </figure>
         </div>

@@ -54,3 +54,25 @@
 .small-icon path {
   stroke: #b828ff;
 }
+
+@media screen and (max-width: 500px) {
+  .experience {
+    height: auto;
+  }
+  .education {
+    position: relative;
+    margin-top: 5em;
+    width: 100%;
+  }
+  .experience-block {
+    margin-top: 2em;
+    padding-right: 2em;
+  }
+  .cube-and-circles {
+    display: none;
+  }
+  .education h1 {
+    font-size: 25px;
+  }
+  
+}

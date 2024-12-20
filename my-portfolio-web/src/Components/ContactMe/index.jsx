@@ -38,10 +38,6 @@ export default function ContactMe() {
     <div className='contactMe'>
       <div className='form'>
         <h2>Reach Out to Me</h2>
-        <p>
-          Ride the waves of Poseidon's realm. Reach out using the form below,
-          and let's embark on a digital odyssey together.
-        </p>
         <form ref={form} onSubmit={sendEmail}>
           <div className='inputs'>
             <div>

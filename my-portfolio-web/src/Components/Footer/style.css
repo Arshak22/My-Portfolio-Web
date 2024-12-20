@@ -7,6 +7,8 @@
   align-items: center;
   padding-top: 2em;
   padding-bottom: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .footerLogo {
@@ -32,10 +34,6 @@
   font-size: 25px;
 }
 
-.footer div {
-  width: 33%;
-}
-
 .footer .social-icons-bio ul {
   margin: 0;
 }
@@ -57,16 +55,7 @@
   .footer div {
     width: 100%;
   }
-  .footerLogo {
-    width: 150px;
-    left: 28%;
-  }
-  .footerIcons {
-    margin-top: 20px;
-    justify-content: center;
-  }
-  .footerIcons .social-icon {
-    margin-left: 10px;
-    margin-right: 10px;
+  .footer h3 {
+    margin-bottom: 25px;
   }
 }

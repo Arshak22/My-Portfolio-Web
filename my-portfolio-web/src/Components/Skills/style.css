@@ -69,3 +69,39 @@
   left: 45%;
   bottom: 5%;
 }
+
+@media screen and (max-width: 500px) {
+  .skills h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .skill-icon {
+    width: 110px;
+    height: 110px;
+  }
+  .css-icon {
+    left: 10%;
+    bottom: 14%;
+  }
+  .js-icon {
+    left: 14%;
+    bottom: 65%;
+  }
+  .typescript-icon {
+    left: 75%;
+    bottom: 65%;
+  }
+  .wordpress-icon {
+    bottom: 15%;
+    right: 5%;
+    left: auto;
+  }
+  .html-icon {
+    left: 20%;
+    bottom: -10%;
+  }
+  .spline-icon {
+    left: 70%;
+    bottom: -10%;
+  }
+}
